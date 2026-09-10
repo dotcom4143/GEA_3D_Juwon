@@ -1,16 +1,21 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float moveSpeed = 5f;
+    private Vector2 moveInput;
+    private CharacterController controller;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        controller.Move(move * Time.deltaTime);
     }
+
+    public void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
+    }
+
+
 }

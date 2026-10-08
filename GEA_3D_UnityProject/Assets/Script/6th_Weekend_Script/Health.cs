@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -40,7 +41,7 @@ public class Health : MonoBehaviour
         if (CompareTag("Player"))
         {
             Debug.Log("게임 오버");
-            Time.timeScale = 0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
         {

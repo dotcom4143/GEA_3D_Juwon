@@ -16,10 +16,8 @@ public class PlayerShooter : MonoBehaviour
         if (Time.time < lastFireTime + fireCooldown) return;
         lastFireTime = Time.time;
 
-        Quaternion spawnRotation = firePoint.rotation * Quaternion.Euler(90f, 0f, 0f);
-
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, spawnRotation);
-        
+        GameObject bullet = Instantiate(bulletPrefab,
+            firePoint.position, firePoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.linearVelocity = firePoint.forward * bulletSpeed;
     }

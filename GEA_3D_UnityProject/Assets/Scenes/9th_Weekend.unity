@@ -348,6 +348,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1567532655}
   - component: {fileID: 1567532656}
+  - component: {fileID: 1567532658}
+  - component: {fileID: 1567532657}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -382,6 +384,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fa6d6c32343804c9c882b71bfe7826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HpPractice
+--- !u!114 &1567532657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567532654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340d825d0fe3fa94d80c928c1f8d33ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardCalculator
+  playSeconds: 3725
+  gold: 1234
+  members: 4
+  kills: 7
+  expPerKill: 35
+  totalDamage: 250
+  hits: 20
+  expRate: 1.5
+--- !u!114 &1567532658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567532654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc035a53a9732cc42b76e1be6e11eb9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RewardCalculator1
+  playSeconds: 7260
+  gold: 100
+  members: 3
+  kills: 3
+  expPerKill: 33
+  totalDamage: 7
+  hits: 2
+  expRate: 1.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
